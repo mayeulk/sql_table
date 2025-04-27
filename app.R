@@ -254,7 +254,7 @@ observeEvent(input$submit_edit, priority = 20, {
 output$responses_table <- DT::renderDataTable({
   
   table <- responses_df() %>% select(-row_id) 
-  names(table) <- c("Date", "Name", "Sex", "Age", "Comment")
+  names(table) <- c("Name", "Sex", "Age", "Comment", "Date")
   table <- datatable(table, 
                      rownames = FALSE,
                      options = list(searching = FALSE, lengthChange = FALSE)
